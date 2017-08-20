@@ -1,0 +1,100 @@
+﻿ <Window x:Class="MyAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyAPP"
+        mc:Ignorable="d"
+        Title="Calculate PaySip,Job Source Central" Closing="Window_Closing"  Icon="Images/check.png"  ResizeMode="CanResizeWithGrip" Height="595" Width="525" MinHeight="595" MinWidth="525" WindowStartupLocation="Manual" Left="100" Top="100">
+   
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="180*"/>
+                <ColumnDefinition Width="335*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="30*"/>
+                <RowDefinition Height="70*" />
+                <RowDefinition Height="70*" />
+                <RowDefinition Height="70*" />
+                <RowDefinition Height="70*" />
+                <RowDefinition Height="70*" />
+                <RowDefinition Height="70*" />
+                <RowDefinition Height="70*" />
+                <RowDefinition Height="70*"/>
+            </Grid.RowDefinitions>
+
+            <Canvas Grid.Row="0"   FlowDirection="RightToLeft" Grid.ColumnSpan="2" Background="#FF363635" >
+                <Image Height="58" Canvas.Top="0" Source="Images/play.png" Stretch="Fill"></Image>
+            </Canvas>
+            <Canvas Name="canvas" Grid.Row="1" Background="LightGray"  FlowDirection="LeftToRight" Grid.ColumnSpan="2">
+
+            </Canvas>
+            <Canvas Grid.Row="9" Background="#FF49691F" FlowDirection="RightToLeft" Grid.ColumnSpan="2">
+                <Image Height="58" Canvas.Top="0" Source="Images/Image.jpg" Stretch="Fill"></Image>
+
+            </Canvas>
+            <Label Name="msg" Grid.Row="1" Grid.ColumnSpan="2" Foreground="Black" Content="" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Georgia" FontSize="14" FontWeight="Normal"></Label>
+
+        <Label Name="IRD"  Content="1.Contractor IRD"   HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" FontFamily="Georgia" FontSize="14" FontWeight="Normal" Margin="5,0,0,37"></Label>
+        <WrapPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+            <TextBox MaxLength="9"  ToolTip="Enter 8 or 9 digit long numeric value" Name="IRDNo" MinHeight="25" MinWidth="250" PreviewKeyDown="IRDNo_PreviewKeyDown" TextChanged="IRDNo_TextChanged" >
+            </TextBox>
+            <Label Content="" Name="IRDerrorlbl" Foreground="Red"></Label>
+      </WrapPanel>
+
+
+        <Label Name="fname"  Content="2.Contractor First Name" Margin="5,0,0,32" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="3" Grid.Column="0" FontFamily="Georgia" FontSize="14" FontWeight="Normal"></Label>
+        <WrapPanel Grid.Row="3" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+
+            <TextBox MaxLength="45" ToolTip="Enter a valid Alphabetic value" TextChanged="fnamebox_TextChanged"  Name="fnamebox" MinHeight="25" MinWidth="300">
+            </TextBox>
+            <Label Content="" Name="error" Foreground="Red"></Label>
+        </WrapPanel>
+   
+            <Label Name="lname"  Content="3.Contractor Last Name" Margin="5,0,0,30" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Grid.Column="0" FontFamily="Georgia" FontSize="14" FontWeight="Normal"></Label>
+        <WrapPanel Grid.Row="4" Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Left">
+
+            <TextBox MaxLength="45" ToolTip="Enter a valid Alphabetic value" TextChanged="lnamebox_TextChanged" Name="lnamebox" MinHeight="25" MinWidth="300"   >
+            </TextBox>
+            <Label Content="" Name="lnerror" Foreground="Red"></Label>
+        </WrapPanel>
+     
+            <Label Name="nochild" Content="4.Number of Childrens" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="5" Grid.Column="0" FontFamily="Georgia" FontSize="14" FontWeight="Normal"></Label>
+        <WrapPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+
+
+            <ComboBox Name="cbox" ToolTip="Select a Value" Text="Is not open" Grid.Row="5" Grid.Column="1" Width="60" Height="40"   VerticalAlignment="Center" HorizontalAlignment="Left"  >
+
+            </ComboBox>
+            <Label Content="" Name="nChilderror" Foreground="Red"></Label>
+
+        </WrapPanel>
+
+        <Label Name="married" Content="5.Martial Status" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="6" Grid.Column="0" FontFamily="Georgia" FontSize="14" FontWeight="Normal"></Label>
+            <WrapPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <RadioButton GroupName="rb" Name="Yes" Content="Married" FontFamily="Georgia" FontSize="14" FontWeight="Normal"></RadioButton>
+            <RadioButton IsChecked="True" GroupName="rb" Name="No" ToolTip="Default value" Content="Single"  FontFamily="Georgia" FontSize="14" FontWeight="Normal" Margin="20,0,0,0"></RadioButton>
+            </WrapPanel>
+            <Label Name="nohour" Content="6.Hours of Work" Margin="5" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="7" Grid.Column="0" FontFamily="Georgia" FontSize="14" FontWeight="Normal"></Label>
+        <WrapPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+
+            <TextBox  Name="nohourbox" ToolTip="Enter a Numeric Value" MaxLength="8" MinHeight="30" MinWidth="60" TextChanged="nohourbox_TextChanged">
+
+            </TextBox>
+            <Label Content="" Name="nHerror" Foreground="Red"></Label>
+        </WrapPanel>
+        <StackPanel Grid.Row="8" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Orientation="Horizontal">
+            <Button Name="clear" ToolTip="Click to clear the Information" FontFamily="Georgia" Content="Clear" Grid.Row="8" Grid.Column="1" Height="40" Width="100" Margin="0,0,5,0"  Click="clear_Click"  ></Button>
+            <Button Name="Recent" ToolTip="Click to see recent contractor information" FontFamily="Georgia" Content="Recent" Grid.Row="8" Grid.Column="1" MinHeight="40" MinWidth="100" Margin="0,0,5,0"  Click="Recent_Click"></Button>
+            <Button Name="calculate2" ToolTip="Click to calculate the contractor's payment" FontFamily="Georgia" Content="Calculate" Grid.Row="8" Grid.Column="1" MinHeight="40" MinWidth="100" Margin="0,0,5,0"  Click="calculate2_Click" ></Button>
+
+        </StackPanel>
+      
+        <Label Name="copyright" Grid.Row="9" Grid.ColumnSpan="2" Foreground="Black" Content="My App WPF(c)CopyRight 2015" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Georgia" FontSize="14" FontWeight="Normal"></Label>
+        
+
+    </Grid>
+        
+</Window>

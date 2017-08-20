@@ -1,0 +1,16 @@
+C:\Visual_studio_Work\MyAPP\MyAPP\bin\Debug\MyAPP.exe.config
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP.csprojResolveAssemblyReference.cache
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MainWindow.g.cs
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\App.g.cs
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP_MarkupCompile.cache
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP_MarkupCompile.lref
+C:\Visual_studio_Work\MyAPP\MyAPP\bin\Debug\MyAPP.exe
+C:\Visual_studio_Work\MyAPP\MyAPP\bin\Debug\MyAPP.pdb
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MainWindow.baml
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP.g.resources
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP.Properties.Resources.resources
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP.csproj.GenerateResource.Cache
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP.exe
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\MyAPP.pdb
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\Window1.g.cs
+C:\Visual_studio_Work\MyAPP\MyAPP\obj\Debug\Window1.baml
